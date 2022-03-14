@@ -1,0 +1,59 @@
+/* ROANGHESI ANA MARIA - 314CB */
+
+
+-index_letter: returneaza pozitia in alfabet a literei date
+
+===============trie1.c===============
+
+-make_T1:  initializeaza un nod T1 
+
+-insert_carte: 
+    insereaza cartea daca nu se afla deja in trie1
+    returneaza 1 daca se afla deja si 0 daca este inserata
+
+-search_T1: cauta cartea si afiseaza ce trebuie pentru comanda search_book 
+
+-search_T1_prefix: 
+    acelasi lucru ca search_T1 pentru cazul cand titlul este un search_T1_prefix
+    se afiseaza maxim primele 3 carti din trie cu ajutorul functiei print_trie_prefix
+
+-print_trie: afiseaza cartile din trie
+
+-print_trie_prefix: afiseaza cel mult primele 3 carti din trie1
+
+===============trie2.c===============
+
+-make_T2:  initializeaza un nod T2 
+
+-insert_autor: 
+    insereaza autorul daca nu se afla deja in trie1
+    creaza trieul de carti al autorului si adauga cartea in el daca nu se afla deja
+    returneaza 1 daca se afla deja si 0 daca este inserata
+
+-search_T2: echivalentul lui search_T1 pentru trie2
+
+-search_T2_prefix: echivalentul lui search_T2_prefix pentru trie2
+
+-search_autor: returneaza trie-ul de carti al autorului
+
+-print_autori_prefix: afiseaza cel mult primii 3 autori din trie2
+
+===============tema3.c===============
+
+/*   ADD_BOOK   */
+-Insereaza cartea in trie
+-Adauga autorul si cartea in trie-ul aceastuia daca nu se afla deja 
+
+/*   SEARCH_BOOK   */
+-foloseste 2 functii pentru titlu normal si prefix
+
+/*   LIST_AUTHOR   */
+-foloseste 2 functii pentru autor normal si prefix
+
+/*   SEARCH_BY_AUTHOR   */
+-Daca se primeste doar prefixul autorului comanda face acelasi lucru ca
+ list_author<prefix>, deci folosim functia search_T2_prefix
+
+-Daca se primeste autorul si titlul 
+    pun in books trie ul autorului cu ajutorul functiei search_autor
+    fac acelasi lucru ca la comanda search_book pentru trie-ul books
